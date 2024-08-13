@@ -23,6 +23,7 @@ public class MvcMemberListServlet extends HttpServlet {
 
         request.setAttribute("members", members);
 
+        // dispatcher를 이용해서 해당 뷰로 forward
         String viewPath = "/WEB-INF/views/members.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);

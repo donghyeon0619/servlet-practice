@@ -33,8 +33,9 @@ public class MvcMemberSaveServlet extends HttpServlet {
 
         // 모델에 데이터를 보낸다.
         request.setAttribute("member", member);
-        String viewPath = "/WEB-INF/views/save-result.jsp";
 
+        // dispatcher를 이용해서 해당 뷰로 forward
+        String viewPath = "/WEB-INF/views/save-result.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);
 

@@ -14,6 +14,7 @@ public class MvcMemberFormServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        // dispatcher를 이용해서 해당 뷰로 forward
         String viewPath = "/WEB-INF/views/new-form.jsp";    // 경로앞에 "/" 붙여줘야지 상대경로로 인식을 안함
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);
